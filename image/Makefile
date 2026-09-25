@@ -7,6 +7,7 @@ USER_PROGRAM := ../user/prog/minimum-user/build/minimum-user.elf
 KERNEL_INPUTS := $(wildcard ../kernel/src/core/*.c) \
 	$(wildcard ../kernel/src/runtime/*.c) \
 	$(wildcard ../kernel/src/startup/*.S) \
+	$(wildcard ../kernel/src/core/*.S) \
 	$(wildcard ../kernel/include/minemu/*.h) \
 	../kernel/linker/kernel.ld \
 	../kernel/Makefile
