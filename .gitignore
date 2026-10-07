@@ -7,3 +7,4 @@
 **/*.map
 **/*.img
 *.txt
+chatlogs*
