@@ -1,0 +1,10 @@
+image = "fixtures/devices/build/hw2-devices.img"
+boot_rom = "../../bootloader/bootloader.bin"
+max_ticks = 1000000
+
+[assert]
+execution_lifecycle = "paused"
+shutdown_lifecycle = "stopped"
+mmu_enabled = true
+cpu_mode = "user"
+trace_values = [0x4d454d55, 0x791c7b62, 0x12345678, 0x87985aa5]

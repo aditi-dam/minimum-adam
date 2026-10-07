@@ -1,0 +1,14 @@
+image = "../../image/build/minimum.img"
+boot_rom = "../../bootloader/bootloader.bin"
+max_ticks = 1400000
+
+[[inputs]]
+at_tick = 300000
+uart = 0
+data = "   \nechx\bo   worked   fine  \nbogus argument\n"
+
+[assert]
+uart0_contains = "msh> msh> worked fine\nmsh> command not found: bogus\nmsh> "
+execution_lifecycle = "paused"
+shutdown_lifecycle = "stopped"
+mmu_enabled = true

@@ -1,0 +1,9 @@
+image = "build/user-mode-hello.img"
+boot_rom = "../../bootloader/bootloader.bin"
+max_ticks = 3000000
+
+[assert]
+uart0_contains = "hello world"
+execution_lifecycle = "paused"
+shutdown_lifecycle = "stopped"
+trace_values = [0x48454c10]

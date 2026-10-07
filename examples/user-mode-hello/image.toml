@@ -1,0 +1,5 @@
+kernel = "kernel/build/user-mode-hello.elf"
+
+[[modules]]
+name = "user-hello"
+elf = "user/build/user-hello.elf"

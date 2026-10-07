@@ -13,11 +13,15 @@ image:
 
 # Run one manifest, for example: just test hw1 echo
 test hw name: image
+    if [[ -f "{{ root }}/tests/{{ hw }}/Makefile" ]]; then make -C "{{ root }}/tests/{{ hw }}" MINEMU="{{ minemu }}" "prepare-{{ name }}"; fi
     {{ minemu }} test "{{ root }}/tests/{{ hw }}/{{ name }}.toml"
 
 # Run every manifest for one homework, for example: just test-all hw1
 test-all hw: image
     #!/usr/bin/env bash
+    if [[ -f "{{ root }}/tests/{{ hw }}/Makefile" ]]; then
+      make -C "{{ root }}/tests/{{ hw }}" MINEMU="{{ minemu }}" all
+    fi
     shopt -s nullglob
     manifests=("{{ root }}"/tests/{{ hw }}/*.toml)
     if (( ${#manifests} == 0 )); then

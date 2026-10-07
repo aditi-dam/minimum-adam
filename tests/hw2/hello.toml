@@ -1,0 +1,10 @@
+image = "fixtures/hello/build/hw2-hello.img"
+boot_rom = "../../bootloader/bootloader.bin"
+max_ticks = 1000000
+
+[assert]
+uart0_contains = "hello world\n"
+execution_lifecycle = "paused"
+shutdown_lifecycle = "stopped"
+mmu_enabled = true
+cpu_mode = "user"

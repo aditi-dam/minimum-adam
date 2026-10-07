@@ -1,2 +1,2 @@
 PROGRAM := svc-context-switch
-include ../../common.mk
+include ../kernel.mk

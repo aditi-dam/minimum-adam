@@ -16,6 +16,16 @@ Run one public test by homework and manifest name, for example:
 just test hw1 echo
 ```
 
+Assignment 2 includes independently packaged user-mode fixtures for the initial
+`ioctl` hello program and the RNG/TRACE interface, plus behavioral checks for
+the user-mode shell:
+
+```sh
+just test hw2 hello
+just test hw2 devices
+just test-all hw2
+```
+
 Students may add manifests or other tests under `tests/` using any reasonable
 layout. Additional student-authored tests are encouraged but are not required
 for Assignment 1.

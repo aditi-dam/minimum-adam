@@ -1,7 +1,8 @@
 ARM_PREFIX ?= arm-none-eabi-
 CC := $(ARM_PREFIX)gcc
 
-KERNEL_DIR := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
+EXAMPLES_DIR := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
+KERNEL_DIR := $(abspath $(EXAMPLES_DIR)/../kernel)
 PROGRAM ?= $(notdir $(CURDIR))
 BUILD := build
 ELF := $(BUILD)/$(PROGRAM).elf
