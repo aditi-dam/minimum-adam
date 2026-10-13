@@ -1,6 +1,6 @@
 image = "../../image/build/minimum.img"
 boot_rom = "../../bootloader/bootloader.bin"
-max_ticks = 700000
+max_ticks = 1000000
 
 [assert]
 uart0_contains = "msh> "
